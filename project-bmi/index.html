@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form class="submit">
+            <p><label for="weight">enter your weight:</label>
+            <input type="text" id="weight" placeholder="enter your weight in kg"></p>
+            <label for="height">enter your height:</label>
+            <input type="text" id="height" placeholder="enter your height in metre">
+            <button>calculate</button>
+            <div class="result"><p>result</p></div>
+        </form>
+    </div>
+    <script>
+        const form = document.querySelector(".submit");
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            const w = document.getElementById('weight');
+            const h = document.getElementById('height');
+            const result = document.querySelector('.result');
+            const weight =parseFloat(w.value);
+            const height= parseFloat(h.value);
+            const bmi = weight / (height * height);
+            result.textContent=bmi;});
+
+    </script>
+
+</body>
+</html>
