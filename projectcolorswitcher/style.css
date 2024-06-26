@@ -1,0 +1,9 @@
+.color{
+    width: 200px;
+    height:100px;
+}
+
+.colorbox{
+    position: relative;
+    transform: translate(50%,50%);
+}
