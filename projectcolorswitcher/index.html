@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="colorbox">
+        <button class="color">red</button><button class="color">green</button><button class="color">blue</button><button class="color">black</button>
+    </div>
+   
+    <script>
+
+        // const btn=document.querySelectorAll(".colorbox.children")
+        // // btn.forEach((button)=>{
+        // //     console.log(button);
+
+        // // })
+        // console.log(btn);
+
+        const btn1=document.querySelectorAll(".color");
+
+        // btn1.addEventListener("click",function(){
+        //     document.body.style.backgroundColor= btn1.textContent;
+        //     console.log(btn1.textContent)
+        // });
+        console.log(btn1);6
+         
+        btn1.forEach(function(btn){
+            btn.addEventListener("click",function(){
+                document.body.style.backgroundColor=btn.textContent;
+            });
+        });
+    </script>
+</body>
+</html>

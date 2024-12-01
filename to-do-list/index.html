@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul class="list">
+
+    </ul>
+    <form class="taskscreen">
+        <label for="work">submit yours task</label>
+        <input  type="text" id="work" placeholder="task">
+        <button class="submit"> SUBMIT</button>
+
+    </form>
+    <script>
+        let taskList = document.querySelector('.list');
+        let taskForm = document.querySelector('.taskscreen');
+        taskForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            let taskInput = document.querySelector('#work');
+            console.log(taskInput.value)
+            let li = document.createElement("li")
+            li.innerHTML = ` ${taskInput.value} <button class="delete-btn">complete</button> `;
+            taskList.appendChild(li);
+            document.getElementById('work').value = '';
+
+            li.querySelector('.delete-btn').addEventListener('click', function () {
+                taskList.removeChild(li);
+            });
+
+        });
+
+
+
+
+
+    </script>
+</body>
+
+</html>
