@@ -13,7 +13,7 @@
     </ul>
     <form class="taskscreen">
         <label for="work">submit yours task</label>
-        <input f type="text" id="work" placeholder="task">
+        <input  type="text" id="work" placeholder="task">
         <button class="submit"> SUBMIT</button>
 
     </form>
@@ -25,8 +25,9 @@
             let taskInput = document.querySelector('#work');
             console.log(taskInput.value)
             let li = document.createElement("li")
-            li.innerHTML = ` ${taskInput.value}       <button class="delete-btn">complete</button> `;
+            li.innerHTML = ` ${taskInput.value} <button class="delete-btn">complete</button> `;
             taskList.appendChild(li);
+            document.getElementById('work').value = '';
 
             li.querySelector('.delete-btn').addEventListener('click', function () {
                 taskList.removeChild(li);
